@@ -1,0 +1,84 @@
+@media only screen and (max-width: 1260px) {
+  .ap-score-input{
+    flex-wrap: wrap;
+  }
+
+  .ap-score-input div{
+    font-size: 12px;
+    width: 15%;
+    margin-bottom: 10px;  
+  }
+
+  .ap-score-input p{
+    width: 100%;
+    text-align: center;
+  }
+  
+}
+
+@media only screen and (max-width: 800px){
+  .ap-name .flex-score-display{
+    margin: 0;
+    width: 50px;;
+  }
+
+  .ap-name .ap-icon{
+    width: 20%;
+  }
+
+  .ap-row, #add-ap{
+    width: 80%;
+    
+  }
+
+  .ap-score-input div{
+    width: 10%;
+    font-size: 18px;  
+  }
+
+  .grade-access-button{
+    width: 35%;
+  }
+
+  .ap-name h2{
+    font-size: 24px;
+    
+  }
+
+  .ap-name{
+    justify-content: space-around;
+  }
+
+  #subheader{
+    flex-wrap: wrap;
+    height: min-content;
+  }
+
+  #subheader .navbutton{
+    width: 30%
+  }
+
+  #submit{
+    width: 80%;
+    margin: 10px 10%;
+  }
+
+}
+@media only screen and (max-width: 450px){
+  .ap-score-input div{
+    font-size: 18px;
+    width: 25%;
+    flex-shrink: 0;
+    margin-bottom: 10px;
+  }
+
+  #subheader .navbutton{
+    width: 40%
+  }
+
+  
+
+  
+
+  
+}

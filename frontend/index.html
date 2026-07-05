@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Flex Score</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header-styles.css">
+    <link rel="stylesheet" href="mobile-styles.css">
+</head>
+<body>
+    <header>
+        <div id="header-brand-logo"></div>
+        <div id="header-logo" class="ui-bold-font">AP Flex Score </div>
+    </header>
+    <div id="subheader">
+        <h1 class="ui-bold-font">Home</h1>
+        <div class="navbutton" data-url="./index.html" data-target="_self">Home</div>
+        <div class="navbutton" data-url="./certificate/create_certificate.html" data-target="_blank" data-function="transferCertificateData">Certificate</div>
+        <div class="navbutton" data-url="./assets/Methodology.pdf" data-target="_self">Methodology and Math</div>
+        <div class="navbutton" data-url="https://github.com/Muyao-Lu/ApFlexScore" data-target="_blank">Github</div>
+        
+
+    </div>
+    <div id="disclaimer">
+        This website is not affiliated with Collegeboard. Please don't sue me!
+    </div>
+    <main>
+        <div id="grade-access-scroll">
+            <div class="grade-access-button inactive" id="middle_school" data-grade="middle_school">Middle School</div>
+            <div class="grade-access-button inactive" id="freshman" data-grade="freshman">Freshman</div>
+            <div class="grade-access-button inactive" id="sophomore" data-grade="sophomore">Sophomore</div>
+            <div class="grade-access-button inactive" id="junior" data-grade="junior">Junior</div>
+            <div class="grade-access-button inactive" id="senior" data-grade="senior">Senior</div>
+        </div>
+
+        <div id="stats"></div>
+
+        <h1 id="grade-access-prompt" class="ui-bold-font">Please select a grade to modify APs</h1>
+        <div id="grade-ap-info" style="display: none;">
+            <h1 class="ui-bold-font" id="grade-name">APs for Junior Year</h1>
+                
+
+            
+            
+            
+            
+            <div id="ap-table">
+                <div id="add-ap">
+                    <h2>Add AP</h2>
+                    <hr>
+                    <div id="add-ap-input-container">
+                        
+                        <input id="add-ap-name">
+
+                        <div id="ap-dropdown" class="disabled">
+                            
+                        </div>
+                        <button id="add-ap-confirm" class="button">Confirm</button>
+                    </div>
+
+                    <h2>Data <span style="display: none;" id="update-alert" title="AP list updated since last calculation. Hit Submit to update!">!</span></h2>
+                    <hr>
+                    <div class="user-results">
+                        <div class="name">Current Flex Score:</div>
+                        <div class="data" id="flex-score">0</div>
+                    </div>
+                    <div class="user-results">
+                        <div class="name">AP Count: </div>
+                        <div class="data" id="ap-count">0</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="submit" class="button">
+                Submit
+                <div id="loading-text" style="display: none;"><span>Loading</span></div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

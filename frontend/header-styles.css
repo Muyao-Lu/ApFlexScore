@@ -1,0 +1,67 @@
+header{
+    border-top: 4px solid var(--special-1);
+    height: 44px;
+    display: flex;
+    border-bottom: 2px solid var(--border-grey);
+    padding: 0 80px;
+}
+
+header #header-logo{
+    background-color:  #009cde;
+    color: white;
+    
+    padding: 10px;
+    display: flex;
+
+}
+
+header #header-brand-logo{
+    width: 44px;
+    background-image: url("assets/brand-logo.png");
+    background-size: 100% 100%;
+}
+
+#subheader{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 72px; 
+    padding: 0 40px;
+
+}
+
+#subheader h1{
+    width: 20%;
+    text-align: center;
+}
+
+#subheader .navbutton{
+    --bottom-padding: 10px;
+    --bottom-border: 2px;
+    width: 20%;
+    text-align: center;
+    
+    height: calc(100% - var(--bottom-padding) - var(--bottom-border));
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: var(--bottom-padding);
+    border-bottom: var(--bottom-border) solid #fff;
+    transition: background-color 0.8s;
+
+}
+
+#subheader .navbutton:hover{
+    background-color: var(--hover-grey);
+    border-bottom: 2px solid black;
+
+}
+
+#disclaimer{
+    background-color: var(--hover-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+    text-align: center;
+}

@@ -1,0 +1,482 @@
+body{
+    --border-grey: #d9d9d9;
+    --selected-border-grey: #a4a4a4;
+    --background-white: #f5f7fc;
+    --hover-grey: #f0f0f0;
+    --selected-grey: #c7c7c7;
+    --warning-red-1: #d42929;
+    --warning-red-2: #d44f4f;
+
+    --special-1: #009cde;
+    --special-2: #0077d9;
+    --special-3: #324dc7;
+    --special-4: #5f3da9;
+    --special-5: #702f8a;
+
+    --grade-specific-color: #fff;
+
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: var(--background-white);
+}
+
+
+@keyframes pulse{
+    0%{
+        opacity: 0.3;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.3;
+    }
+}
+#grade-access-scroll{
+    width: 80%;
+    margin: 0 10%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#loading-text{
+    background-color: var(--hover-grey);
+    color: var(--selected-border-grey);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loading-text span{
+    animation: pulse 1s infinite;
+}
+
+
+.button:hover{
+    transform: scale(1.05);
+}
+.grade-access-button{
+    font-size: 16px;
+    width: 15%;
+
+    
+    /* border-radius: 0 0 10px 10px;*/
+    box-shadow: 6px 6px 7px rgba(0, 0, 0, 0.2);
+    height: 50px;
+    margin: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid var(--border-grey);
+    
+
+
+}
+
+.grade-access-button:nth-child(1){
+    border-top: 4px solid var(--special-1);
+}
+
+.grade-access-button:nth-child(2){
+    border-top: 4px solid var(--special-2);
+}
+
+.grade-access-button:nth-child(3){
+    border-top: 4px solid var(--special-3);
+}
+
+.grade-access-button:nth-child(4){
+    border-top: 4px solid var(--special-4);
+}
+
+.grade-access-button:nth-child(5){
+    border-top: 4px solid var(--special-5);
+}
+
+
+.grade-access-button.inactive{
+    background-color: var(--hover-grey);
+    transition: transform 0.5s, box-shadow 0.25s;
+}
+
+.grade-access-button.active{
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: none;
+    
+}
+
+.grade-access-button.inactive:hover{
+    transform: scale(1.05);
+}
+
+#grade-access-prompt{
+    width: 60%;
+    margin: 30px 20%;
+    color: var(--border-grey);
+    text-align: center;
+
+}
+
+#grade-ap-info{
+    margin-top: 30px;
+}
+.ui-bold-font{
+    font-weight: 700;
+}
+
+main{
+    margin-top: 50px;
+}
+
+#grade-name{
+    text-align: center;
+}
+
+#ap-table{
+    width: 80%;
+    margin: 20px 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+
+}
+
+.ap-row{
+    width: max(30%, 80px);
+    padding: 20px;
+    background-color: white;
+    flex-shrink: 0;
+    border-radius: 10px;
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    box-sizing: content-box;
+
+}
+
+.ap-row.sizing{
+    margin: 0 50%;
+}
+
+.ap-name h2{
+    font-size: 18px;
+    overflow-wrap: break-word;
+    width: 50%;
+}
+
+.ap-icon{
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ap-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#add-ap{
+    width: max(30%, 80px);
+    padding: 20px;
+    background-color: white;
+    flex-shrink: 0;
+    border-radius: 10px;
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    box-sizing: content-box;
+    justify-content: center;
+    overflow-y: auto;
+    
+}
+
+#add-ap-input-container{
+    display: flex;
+    justify-content: center;
+    margin: 5% 0;
+    flex-direction: column;
+    align-items: center;    
+
+}
+
+#add-ap-name, #add-ap-confirm{
+    padding: 10px;
+    box-sizing: content-box;
+    
+}
+
+
+#add-ap-name{
+    border: 2px solid var(--border-grey);
+    background-color: var(--hover-grey);
+    border-radius: 100px;
+    height: 20px;
+    outline: none;
+    
+    transition: border 0.2s;
+    width: 80%;
+    
+}
+
+
+#add-ap-name:focus{
+    border: 2px solid var(--grade-specific-color);
+}
+
+#add-ap-confirm{
+    border-radius: 100px;
+    border: none;
+    background-color: var(--special-2);
+    color: var(--background-white);
+    font-weight: 700;
+    width: 80%;
+    padding: 10px;
+    margin-top: 5%;
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+#add-ap-confirm:hover{
+    background-color: var(--special-3);
+}
+
+#ap-dropdown.disabled{
+    display: none;
+}
+
+#ap-dropdown.enabled{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 75%;
+
+}
+
+#ap-dropdown div{
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid var(--border-grey);
+    text-align: center;
+    transition: background-color 0.5s;
+}
+
+#ap-dropdown div:hover{
+    background-color: var(--hover-grey);
+}
+
+#ap-dropdown div:nth-last-child(-n + 1){
+    border-radius: 0 0 10px 10px;
+}
+
+.ap-score-input{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
+}
+
+.ap-score-input div{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    align-items: center;
+    border-radius: 100px;
+    transition: background-color 0.5s;
+
+}
+
+.ap-score-input div:hover{
+    background-color: var(--hover-grey);
+    cursor: pointer;
+}
+
+.ap-score-input div:nth-child(2){
+    border: 2px solid var(--special-1)
+}
+.ap-score-input div:nth-child(3){
+    border: 2px solid var(--special-2)
+}
+.ap-score-input div:nth-child(4){
+    border: 2px solid var(--special-3)
+}
+.ap-score-input div:nth-child(5){
+    border: 2px solid var(--special-4)
+}
+.ap-score-input div:nth-child(6){
+    border: 2px solid var(--special-5)
+}
+.ap-score-input div:nth-child(7){
+    border: 2px solid black;
+}
+
+.ap-score-input div.enabled:nth-child(2){
+    background-color: var(--special-1)
+}
+.ap-score-input div.enabled:nth-child(3){
+    background-color: var(--special-2)
+}
+.ap-score-input div.enabled:nth-child(4){
+    background-color: var(--special-3)
+}
+.ap-score-input div.enabled:nth-child(5){
+    background-color: var(--special-4)
+}
+.ap-score-input div.enabled:nth-child(6){
+    background-color: var(--special-5)
+}
+.ap-score-input div.enabled:nth-child(7){
+    background-color: black;
+}
+
+.ap-badge-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ap-badge-button{
+    border: 2px solid var(--border-grey);
+    width: 80%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: background-color 0.5s, border-color 0.5s;
+}
+
+.ap-badge-button small{
+    text-align: center;
+    font-size: 12px;
+}
+
+.ap-badge-button.enabled{
+    background-color: var(--selected-grey);
+    border: 2px solid var(--selected-border-grey);
+}
+.ap-score-input div.enabled{
+    font-weight: 700;
+    color: var(--background-white)
+}
+
+.remove-button{
+    width: 60%;
+    border-radius: 100px;
+    background-color: var(--warning-red-2);
+    text-align: center;
+    margin: 0 20%;
+    padding: 10px 0;
+    font-weight: 700;
+    color: var(--background-white);
+    transition: background-color 0.5s, transform 0.5s;
+
+}
+
+.remove-button:hover{
+    background-color: var(--warning-red-1);
+
+}
+
+
+h1{
+    font-size: 24px;
+    text-align: center;
+}
+
+h2{
+    font-size: 18px;
+    text-align: center;
+}
+
+hr{
+    width: 80%;
+    border: 2px solid var(--grade-specific-color);
+
+}
+
+#submit{
+    width: 30%;
+
+    margin: 0 35% 20px 35%;
+    padding: 10px 0;
+    border-radius: 100px;
+    background-color: var(--special-2);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    transition: background-color 0.5s, transform 0.5s;
+    position: relative;
+
+}
+
+#submit:hover{
+    background-color: var(--special-3);
+}
+
+.user-results{
+    width: 80%;
+    margin: 10%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.user-results .data{
+    width: 20%;
+    padding: 10px;
+    background-color: var(--selected-grey);
+    text-align: center;
+}
+
+.user-results .name{
+    display: flex;
+    align-items: center;
+    width: 75%;
+}
+
+#add-ap #update-alert{
+    border-radius: 100%;
+    color: var(--warning-red-2);
+
+    aspect-ratio: 1/1;
+    width: 5%;
+    flex-shrink: 0;
+    display: inline-block;
+    transition: color 0.25s, transform 0.25s;
+}
+
+#add-ap #update-alert:hover{
+    color: var(--warning-red-1);
+    transform: scale(1.2);
+}
+
+.ap-row .flex-score-display{
+    background-color: var(--grade-specific-color);
+    border-radius: 100px;
+    width: 20%;
+    height: 75%;
+    color: white;
+    display: inline-block;
+    font-weight: 700;
+    text-align: center;
+    margin-left: 30px;
+    padding: 5px 0;
+}
+
