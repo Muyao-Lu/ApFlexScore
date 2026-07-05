@@ -1,0 +1,144 @@
+body{
+    --border-grey: #d9d9d9;
+    --selected-border-grey: #a4a4a4;
+    --background-white: #f5f7fc;
+    --hover-grey: #f0f0f0;
+    --selected-grey: #c7c7c7;
+    --gold: #da983c;
+    --silver: #71706e;
+    --bronze: #804a00;
+
+    --special-1: #009cde;
+    --special-2: #0077d9;
+    --special-3: #324dc7;
+    --special-4: #5f3da9;
+    --special-5: #702f8a;
+
+    font-family: sans-serif;
+    margin: 0;
+
+}
+
+
+#submit{
+    background-color: var(--special-2);
+    width: 30%;
+    margin: 0 35%;
+    padding: 15px 0;
+    font-weight: 700;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    text-align: center;
+}
+
+#certificate{
+    width: 60%;
+    margin: 5% 20% 3% 20%;
+    aspect-ratio: 1 / 1.294;
+    border-radius: 10px;
+    padding: 20px;
+    background-image: url("frame.png");
+    background-size: cover; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#certificate h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+#certificate #flex-score-display{
+    font-size: 100px;
+    color: var(--gold);
+    margin-top: 5%;
+    text-align: center;
+    font-weight: 800;
+}
+
+#certificate #flex-score-raw-container{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 5%;
+    color: black;
+}
+
+#certificate hr{
+    border: 2px solid black;
+    width: 25%;
+}
+
+#certificate #highest-scores{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 5%;
+    height: 20%;
+    
+}
+
+#certificate #highest-scores .flex-score-top{
+    height: 25%;
+    box-shadow: 8px 8px 7px rgba(0, 0, 0, 0.4);
+    background-color: var(--hover-grey);
+    font-weight: bold;
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 10px;
+    align-items: center;
+    font-size: 25px;
+
+}
+
+.flex-score-top #score-1{
+    color: var(--gold);
+    margin-left: 2%;
+    margin-right: 3%;
+}
+
+.flex-score-top #score-2{
+    color: var(--silver);
+    margin-left: 2%;
+    margin-right: 3%;
+}
+
+.flex-score-top #score-3{
+    color: var(--bronze);
+    margin-left: 2%;
+    margin-right: 3%;
+}
+
+#name{
+    border: 2px solid var(--border-grey);
+    background-color: var(--hover-grey);
+    border-radius: 100px;
+    height: 20px;
+    outline: none;
+    
+    transition: border 0.2s;
+    width: 30%;
+    padding: 10px 0;
+    margin:  30px 35% 10px 35%;
+    text-align: center;
+}
+
+#name:focus{
+    border: 2px solid var(--special-1);
+}
+
+h2{
+    text-align: center;
+}
+
+#preview-header{
+    margin: 0;
+    margin-top: 50px;
+    
+}
+

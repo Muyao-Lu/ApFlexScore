@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="certificate_styles.css">
+        <link rel="stylesheet" href="../header-styles.css">
+        <title>Certificate</title>
+    </head>
+    <body>
+        <header>
+            <div id="header-brand-logo"></div>
+            <div id="header-logo" class="ui-bold-font">AP Flex Score </div>
+        </header>
+        <div id="subheader">
+            <h1 class="ui-bold-font">Home</h1>
+            <div class="navbutton" data-url="../index.html" data-target="_self">Home</div>
+            <div class="navbutton">Certificate</div>
+            <div class="navbutton" data-url="../assets/Methodology.pdf" data-target="_self">Methodology and Math</div>
+            <div class="navbutton" data-url="https://github.com/Muyao-Lu/ApFlexScore" data-target="_blank">Github</div>
+            
+
+        </div>
+        <div id="disclaimer">
+            This website is not affiliated with Collegeboard. Please don't sue me!
+        </div>
+        <h2 id="customize-header">Make it yours!</h2>
+        <input id="name" placeholder="Your Name">
+
+        <div id="submit">Generate Certificate!</div>
+        <script src="certificate.js"></script>
+
+        <h2 id="preview-header">Preview</h2>
+        <div id="certificate">
+            <h1>Your Flex Score</h1>
+            <hr>
+            <div id="flex-score-display"></div>
+            <div id="flex-score-raw-container">Raw Flex Score: <span id="flex-score-raw-display"></span></div>
+            <div id="highest-scores">
+                <div class="flex-score-top"></div>
+                <div class="flex-score-top"></div>
+                <div class="flex-score-top"></div>
+            </div>
+
+        </div>
+        
+        
+    </body>
+</html>

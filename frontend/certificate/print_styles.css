@@ -1,0 +1,45 @@
+body *{
+    display: none !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+
+}
+
+#certificate h1, #certificate hr, #certificate #flex-score-display, #certificate #flex-score-raw-container, #certificate span{
+    display: block !important;
+}
+
+#certificate{
+    width: 210mm;
+    margin: 0;
+    background-image: url("frame.png");
+    display: flex !important;
+    
+}
+
+/*
+#certificate h1{
+    font-size: 100px;
+    
+}
+
+#certificate #flex-score-display{
+    font-size: 120px;
+}
+
+#certificate #flex-score-raw-container{
+    font-size: 60px;
+}*/
+
+#certificate #highest-scores{
+    display: flex !important;
+    
+}
+
+#certificate #highest-scores .flex-score-top, #certificate #highest-scores .flex-score-top *{
+    display: flex !important;
+    font-size: 20px;
+
+}
+
+
