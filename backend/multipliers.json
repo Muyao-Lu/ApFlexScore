@@ -1,0 +1,32 @@
+{
+    "self_study": {
+        "multiplier": 1.1, 
+        "description": "A legendary flex-score booster, this item can only be applied to APs where all studying was done by a single individual without help.",
+        "type": "per_ap"
+    },
+    "out_of_school": {
+        "multiplier": 1.05,
+        "description": "Less prestigious than self studying, but still quite respected. This item is to be used on APs that were taken outside of your primary school.",
+        "type": "per_ap"
+    },
+    "perfect_score": {
+        "multiplier": 2.5,
+        "description": "The ultimate multiplier, reserved for those extremely rare perfect score letters.",
+        "type": "per_ap"
+    },
+    "freshman": {
+        "multiplier": 1.05,
+        "description": "Sweaty badge for sweaty freshmen",
+        "type": "per_year"
+    },
+    "sophomore": {
+        "multiplier": 1.02,
+        "description": "Respectable, trying to get ahead of the crowd. Just don't burn out",
+        "type": "per_year"
+    },
+    "middle_school": {
+        "multiplier": 1.15,
+        "description": "Ok. What the heck",
+        "type": "per_year"
+    }
+}
