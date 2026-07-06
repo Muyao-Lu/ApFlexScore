@@ -480,3 +480,13 @@ hr{
     padding: 5px 0;
 }
 
+
+#secret-message{
+    color: black;
+    font-family: monospace;
+    width: 50%;
+    overflow: hidden;
+    transition: color 2s;   
+
+}
+
