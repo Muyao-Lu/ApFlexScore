@@ -271,3 +271,16 @@ export function enterLoading(){
 export function exitLoading(){
     document.querySelector("#loading-text").style.display = "none";
 }
+
+export function createSecretMessage(element, text, index=1){
+    /* The main purpose of AP is to flex. Getting into a good university is just a byproduct*/
+    if (index >= text.length){
+        element.textContent = text.slice(0, index);
+        setTimeout(() => element.textContent = "", 2000);
+        return;
+    }
+
+    element.textContent = text.slice(0, index);
+    setTimeout(() => createSecretMessage(element, text, index+1), 50);
+
+}

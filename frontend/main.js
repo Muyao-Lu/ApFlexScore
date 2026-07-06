@@ -1,6 +1,6 @@
 import {serialize, initializeJson, save, load, saveScore, loadScore} from "./convert.js";
 import {enterLoading, exitLoading, createApCard, updateAlertOn, updateAlertOff, setGridHeight, showDropDown, 
-    hideDropDown, toggleVisualGradeTab, loadGradeAPs, toggleBadgeButton, toggleScoreButtons} from "./styling.js";
+    hideDropDown, toggleVisualGradeTab, loadGradeAPs, toggleBadgeButton, toggleScoreButtons, createSecretMessage} from "./styling.js";
 {
 const apData = {
     "Comp Sci Principles": { code: "comp_sci_principles", symbol: "💻" },
@@ -155,7 +155,9 @@ function loadDOM(){
     const json = load();
     const apTable = document.querySelector("#ap-table");
 
-    
+    if (! json){
+        return;
+    }
     for (let grade of Object.keys(json)){
         for (let apCode of Object.keys(json[grade])){
 
@@ -191,6 +193,7 @@ const ap_name_input = document.querySelector("#add-ap-name");
 const tab_buttons = document.querySelectorAll(".navbutton");
 const ap_score_buttons = document.querySelectorAll(".ap-score-button");
 const ap_badge_buttons = document.querySelectorAll(".ap-badge-button");
+const logo = document.querySelector("#header-brand-logo");
 
 
 ap_name_input.addEventListener("input", function(event){autoCompleteAPs(event.target.value)});
@@ -241,7 +244,10 @@ document.addEventListener("DOMContentLoaded", () => {
     loadDOM();
     setGridHeight(); 
     window.addEventListener("resize", setGridHeight)
-})
+});
+
+logo.addEventListener("click", () => createSecretMessage(document.querySelector("#secret-message"), 
+"The main purpose of AP is to flex. Getting into a good university is just a byproduct"))
 
 ap_name_input.addEventListener("focus", showDropDown);
 ap_name_input.addEventListener("focusout", () => setTimeout(hideDropDown, 500));
